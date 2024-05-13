@@ -1,8 +1,9 @@
-import { Margin } from '@mui/icons-material'
-import { Box, Button, IconButton, Stack, Typography, colors } from '@mui/material'
+import { Box,  IconButton, Stack, Typography } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import roulette from '../../assets/images/rolette.jpeg'
 import rouletteBORD from '../../assets/images/rolettetable.png'
+import ball from "../../assets/images/images.png"
+
 
 function Home() {
 
@@ -72,107 +73,217 @@ function Home() {
         </Stack>
         <Stack direction='row' justifyContent='end' sx={{ height: '28.56%' }}>
           <Stack sx={{ width: '20%', height: '50%' }}>
-            <IconButton sx={style.btn3}>
+            <IconButton sx={style.btn3} onClick={() => {
+              alert('You clicked me!');
+            }}>
               <Typography variant="body1" color="initial">
                 19to36
               </Typography>
             </IconButton>
-            <IconButton sx={style.btn3}>
+            <IconButton sx={style.btn3} onClick={() => {
+              alert('You clicked me!');
+            }}>
               <Typography variant="body1" color="initial">
                 2 to 1
               </Typography>
             </IconButton>
           </Stack>
           <Stack sx={{ width: '20%', height: '100%' }}>
-            <IconButton sx={style.btn3}>
+            <IconButton sx={style.btn3} onClick={() => {
+              alert('You clicked me!');
+            }}>
               <Typography variant="body1" color="initial">
                 2 to 1
               </Typography>
             </IconButton>
           </Stack>
           <Stack sx={{ width: '60%', height: '100%', display: 'flex', flexWrap: 'wrap', justifyContent: "space-between" }}>
-            <IconButton sx={{ ...style.btn2, ...style.black }}><Typography>36</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.red }}><Typography>33</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.black }}><Typography>30</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.red }}><Typography>27</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.red }}><Typography>35</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.black }}><Typography>32</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.red }}><Typography>29</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.black }}><Typography>26</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.black }}><Typography>34</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.red }}><Typography>31</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.black }}><Typography>28</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.red }}><Typography>25</Typography></IconButton>
+
+            <IconButton sx={{ ...style.btn2, ...style.black }} onClick={() => {
+              alert('bit 10 value!');
+            }}><Typography onClick={() => {
+              alert('You clicked me!');
+            }}>36 </Typography>
+            </IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.red }} onClick={() => {
+              alert('bit 10 value!');
+            }}><Typography onClick={() => {
+              alert('You clicked me!');
+            }}>33</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.black }} onClick={() => {
+              alert('bit 10 value!');
+            }}><Typography onClick={() => {
+              alert('Lose 10!');
+            }}>30</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.red }} onClick={() => {
+              alert('bit 10 value!');
+            }}><Typography onClick={() => {
+              alert('lose!');
+            }}>27</Typography></IconButton>
+
+            <IconButton sx={{ ...style.btn2, ...style.red }} onClick={() => {
+              alert('You clicked me!');
+            }}><Typography>35</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.black }} onClick={() => {
+              alert('You clicked me!');
+            }}><Typography>32</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.red }} onClick={() => {
+              alert('You clicked me!');
+            }}><Typography>29</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.black }} onClick={() => {
+              alert('You clicked me!');
+            }}><Typography>26</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.black }}><Typography onClick={() => {
+              alert('You clicked me!');
+            }}>34</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.red }} onClick={() => {
+              alert('10 bit value!');
+            }}><Typography onClick={() => {
+              alert('You clicked me!');
+            }}>31</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.black }} onClick={() => {
+              alert('10 bit value!');
+            }}><Typography onClick={() => {
+              alert('You clicked me!');
+            }}>28</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.red }} onClick={() => {
+              alert('10 bit value!');
+            }}><Typography onClick={() => {
+              alert('You clicked me!')
+            }}>25</Typography></IconButton>
           </Stack>
         </Stack>
         <Stack direction='row' justifyContent='end' sx={{ height: '28.56%' }}>
           <Stack sx={{ width: '20%', height: '50%' }}>
-            <IconButton sx={style.btn3}>
+            <IconButton sx={style.btn3} onClick={() => {
+              alert('You clicked me!');
+            }}>
               <Typography variant="body1" color="initial">
                 2 to 1
               </Typography>
             </IconButton>
-            <IconButton sx={style.btn3}>
+            <IconButton sx={style.btn3} onClick={() => {
+              alert('You clicked me!');
+            }}>
               <Typography variant="body1" color="initial">
                 2 to 1
               </Typography>
             </IconButton>
           </Stack>
           <Stack sx={{ width: '20%', height: '100%' }}>
-            <IconButton sx={style.btn3}>
+            <IconButton sx={style.btn3} onClick={() => {
+              alert('You clicked me!');
+            }}>
               <Typography variant="body1" color="initial">
                 2 to 1
               </Typography>
             </IconButton>
           </Stack>
           <Stack sx={{ width: '60%', height: '100%', display: 'flex', flexWrap: 'wrap', }}>
-            <IconButton sx={{ ...style.btn2, ...style.black }}><Typography>24</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.red }}><Typography>21</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.black }}><Typography>18</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.red }}><Typography>15</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.red }}><Typography>23</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.black }}><Typography>20</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.red }}><Typography>17</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.black }}><Typography>14</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.black }}><Typography>22</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.red }}><Typography>19</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.black }}><Typography>16</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.red }}><Typography>13</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.black }} onClick={() => {
+              alert('You clicked me!');
+            }}><Typography>24</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.red }} onClick={() => {
+              alert('You clicked me!');
+            }}><Typography>21</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.black }} onClick={() => {
+              alert('You clicked me!');
+            }}><Typography>18</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.red }} onClick={() => {
+              alert('You clicked me!');
+            }}><Typography>15</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.red }} onClick={() => {
+              alert('You clicked me!');
+            }}><Typography>23</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.black }} onClick={() => {
+              alert('You clicked me!');
+            }}><Typography>20</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.red }} onClick={() => {
+              alert('You clicked me!');
+            }}><Typography>17</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.black }} onClick={() => {
+              alert('You clicked me!');
+            }}><Typography>14</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.black }} onClick={() => {
+              alert('You clicked me!');
+            }}> <Typography>22</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.red }} onClick={() => {
+              alert('You clicked me!');
+            }}><Typography >19</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.black }} onClick={() => {
+              alert('You clicked me!');
+            }}><Typography>16</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.red }} onClick={() => {
+              alert('You clicked me!');
+            }}><Typography>13</Typography></IconButton>
           </Stack>
         </Stack>
         <Stack direction='row' justifyContent='end' sx={{ height: '28.56%' }}>
           <Stack sx={{ width: '20%', height: '50%' }}>
-            <IconButton sx={style.btn3}>
+            <IconButton sx={style.btn3} onClick={() => {
+              alert('who!');
+            }}>
               <Typography variant="body1" color="initial">
                 2 to 1
               </Typography>
             </IconButton>
-            <IconButton sx={style.btn3}>
+            <IconButton sx={style.btn3} onClick={() => {
+              alert('You clicked me!');
+            }}>
               <Typography variant="body1" color="initial">
                 2 to 1
               </Typography>
             </IconButton>
           </Stack>
           <Stack sx={{ width: '20%', height: '100%' }}>
-            <IconButton sx={style.btn3}>
+            <IconButton sx={style.btn3} onClick={() => {
+              alert('You clicked me!');
+            }}>
               <Typography variant="body1" color="initial">
                 2 to 1
               </Typography>
             </IconButton>
           </Stack>
-          <Stack sx={{ width: '60%', height: '100%', display: 'flex', flexWrap: 'wrap', }}>
-            <IconButton sx={{ ...style.btn2, ...style.black }}><Typography>12</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.red }}><Typography>9</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.black }}><Typography>6</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.red }}><Typography>3</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.red }}><Typography>11</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.black }}><Typography>8</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.red }}><Typography>5</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.black }}><Typography>2</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.black }}><Typography>10</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.red }}><Typography>7</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.black }}><Typography>4</Typography></IconButton>
-            <IconButton sx={{ ...style.btn2, ...style.red }}><Typography>1</Typography></IconButton>
+          <Stack sx={{ width: '60%', height: '100%', display: '', flexWrap: 'wrap', }} onClick={() => {
+            alert('bit 10 value!');
+          }}>
+            <IconButton sx={{ ...style.btn2, ...style.black }} ><Typography onClick={() => {
+              alert('You clicked me!');
+            }}>12</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.red }} onClick={() => {
+              alert('You clicked me!');
+            }}><Typography>9</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.black }} onClick={() => {
+              alert('You clicked me!');
+            }}><Typography>6</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.red }} onClick={() => {
+              alert('You clicked me!');
+            }}><Typography>3</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.red }} onClick={() => {
+              alert('You clicked me!');
+            }}><Typography>11</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.black }} onClick={() => {
+              alert('You clicked me!');
+            }}><Typography>8</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.red }} onClick={() => {
+              alert('You clicked me!');
+            }}><Typography>5</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.black }} onClick={() => {
+              alert('You clicked me!');
+            }}><Typography>2</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.black }} onClick={() => {
+              alert('You clicked me!');
+            }}><Typography>10</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.red }} onClick={() => {
+              alert('You clicked me!');
+            }}><Typography>7</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.black }} onClick={() => {
+              alert('You clicked me!');
+            }}><Typography>4</Typography></IconButton>
+            <IconButton sx={{ ...style.btn2, ...style.red }}
+            ><Typography onClick={() => {
+              alert('You clicked me!');
+            }}>1</Typography></IconButton>
           </Stack>
         </Stack>
         <Stack direction='row' justifyContent='end' sx={{ height: '7.14%' }}>
@@ -185,8 +296,14 @@ function Home() {
         </Stack>
       </Box>
       <Box sx={{ width: '200px', height: "200px", position: 'absolute', borderRadius: '50%', bottom: '1%', right: '10%' }} >
-        <Box component='img' src={roulette} className='rotating-element'></Box>
+        <Box component='img' src={roulette} className='rotating-element'>
+        </Box>
       </Box>
+      <Box sx={{ width: '12px', height: "12px", position: 'absolute', borderRadius: '50%', bottom: '1%', right: '10%', top: '80%', left: '78%' }} >
+        <Box component='img' src={ball} className=''>
+        </Box>
+      </Box>
+
       <Box sx={{
         width: '25px', height: '100%',
       }}>
@@ -278,8 +395,7 @@ const style = {
     background: 'red', width: '120px',
     transform: 'rotate(90deg)', position: 'absolute', bottom: '8%', left: '-9%', borderRadius: '5px',
     '&>p:nth-child(1)': { color: 'black', fontSize: '13px', fontWeight: '600', textAlign: 'center', },
-    '&>p:nth-child(2)': { color: 'white', fontSize: '13px', fontWeight: '600', padding: '5px 5px', background: 'red', width: '80%', margin: 'auto', marginBottom: '5px', borderRadius: '2px', },
-  },
+    '&>p:nth-child(2)': { color: 'white', fontSize: '13px', fontWeight: '600', padding: '5px 5px', background: 'red', width: '80%', margin: 'auto', marginBottom: '5px', borderRadius: '2px', },},
   naiming5: {
     background: 'red', width: '120px',
     transform: 'rotate(90deg)', position: 'absolute', bottom: '31%', left: '5%', borderRadius: '5px',
@@ -321,5 +437,9 @@ const style = {
   winnerLooserList3: {
     width: '100%',
     '&>p': { fontSize: '35px', fontWeight: '600', color: 'yellow', textAlign: 'center' }
+  },
+  ballouter: {
+    position: 'absolute', width: '75px', height: '75px', background: 'black', zIndex: 10000000, bottom: '4.5%', left: '12%',
+    border: '2px solid white', borderRadius: '10px', outline: '10px solid black', boxSizing: 'border-box',
   },
 }
