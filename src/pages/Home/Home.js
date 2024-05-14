@@ -1,10 +1,14 @@
 import { Margin } from '@mui/icons-material'
-import { Box, Button, IconButton, Stack, Typography, colors } from '@mui/material'
+import { Box, Button, Drawer, IconButton, Stack, Typography, colors } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import roulette from '../../assets/images/rolette.jpeg'
 import rouletteBORD from '../../assets/images/rolettetable.png'
+import { NavLink } from 'react-router-dom'
+import rollatesidebar from '../../assets/images/roulettesidebar.png'
+import CloseIcon from '@mui/icons-material/Close';
 
 function Home() {
+  const [open, setOpen] = useState(false);
 
   return (
     <Box className="home" sx={style.root}>
@@ -190,7 +194,7 @@ function Home() {
       <Box sx={{
         width: '25px', height: '100%',
       }}>
-        <Box sx={style.naiming6}>
+        <Box sx={style.naiming6} component={NavLink} onClick={() => { setOpen(!open) }}>
           <Typography variant="body1" color="initial"></Typography>
           <Typography variant="body1" color="initial">NEIGHTBOUR BET</Typography>
         </Box>
@@ -221,6 +225,65 @@ function Home() {
           <Box className="mask"></Box>
         </Box>
       </Box>
+      <Drawer sx={{ '&>div': { background: '#0000009e', width: '400px', height: '85vh', } }} anchor='top' open={open} onClose={() => { setOpen(!open) }}>
+        <Box sx={{ width: '100%', height: '100%', position: 'relative' }}>
+          <Box sx={{ position: 'absolute', right: '20px', bottom: '20px', zIndex: '5000000', }}>
+            <NavLink onClick={() => { setOpen(!open) }}>
+              <CloseIcon sx={{ color: 'white', fontSize: '40px' }} />
+            </NavLink>
+          </Box>
+          <Box sx={{ width: '100%', height: '100%', position: 'relative', }}>
+            <Box sx={{
+              position: 'absolute',
+              transform: 'rotate(90deg)',
+              width: 500,
+              height: 173,
+              top: '35%',
+              left: '-14%',
+
+            }}>
+              <Box component='img' src={rollatesidebar}></Box>
+              <Box component={NavLink} onClick={() => { alert('1st alert ') }} sx={{
+                width: '143px',
+                height: '62px',
+                position: 'absolute',
+                top: '33%',
+                left: '7%',
+                clipPath: 'polygon(0 0, 65% 0, 100% 100%, 0% 100%)',
+                // background: 'red',
+              }}></Box>
+              <Box component={NavLink} onClick={() => { alert('2nd alert ') }} sx={{
+                width: 133,
+                height: 62,
+                position: 'absolute',
+                top: '33%',
+                left: '26%',
+                clipPath: 'polygon(0 0, 100% 0, 100% 100%, 35% 100%)',
+                WebkitClipPath: 'polygon(0 0, 100% 0, 100% 100%, 35% 100%)',
+                // backgroundColor: 'green',
+              }}></Box>
+              <Box component={NavLink} onClick={() => { alert('3rd alert ') }} sx={{
+                width: 125,
+                height: 62,
+                position: 'absolute',
+                top: '33%',
+                left: '53%',
+                // backgroundColor: 'yellow',
+              }}></Box>
+              <Box component={NavLink} onClick={() => { alert('4th alert ') }} sx={{
+                width: 73,
+                height: 62,
+                position: 'absolute',
+                top: '33%',
+                right: '7%',
+                // backgroundColor: 'black',
+                borderRadius: '25px',
+              }}></Box>
+            </Box>
+
+          </Box>
+        </Box>
+      </Drawer >
     </Box >
   )
 }
@@ -229,7 +292,7 @@ export default Home
 
 const style = {
   root: {
-    maxWidth: '450px', width: '100%', backgroundColor: '#000000', height: '85vh', overflow: 'hidden', marginTop: 'auto', position: 'relative',
+    maxWidth: '400px', width: '100%', backgroundColor: '#000000', height: '85vh', overflow: 'hidden', marginTop: 'auto', position: 'relative',
     backgroundImage: `url(${rouletteBORD})`, backgroundSize: '100% 100%',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'right',
@@ -282,7 +345,7 @@ const style = {
   },
   naiming5: {
     background: 'red', width: '120px',
-    transform: 'rotate(90deg)', position: 'absolute', bottom: '31%', left: '5%', borderRadius: '5px',
+    transform: 'rotate(90deg)', position: 'absolute', bottom: '34%', left: '5%', borderRadius: '5px',
     '&>p:nth-child(1)': { color: 'black', fontSize: '13px', fontWeight: '600', textAlign: 'center', },
     '&>p:nth-child(2)': { color: 'white', fontSize: '13px', fontWeight: '600', padding: '5px 5px', background: 'red', width: '80%', margin: 'auto', marginBottom: '5px', borderRadius: '2px', },
   },
@@ -293,7 +356,7 @@ const style = {
     '&>p:nth-child(2)': { color: 'white', fontSize: '13px', fontWeight: '600', padding: '5px 5px', background: '#15158f', width: '80%', margin: 'auto', marginBottom: '5px', borderRadius: '2px', },
   },
   countdownOuter: {
-    position: 'absolute', width: '75px', height: '75px', background: 'black', zIndex: 10000000, bottom: '4.5%', left: '12%',
+    position: 'absolute', width: '75px', height: '75px', background: 'black', bottom: '4.5%', left: '15%',
     border: '2px solid white', borderRadius: '10px', outline: '10px solid black', boxSizing: 'border-box',
   },
   winnerlooserouter: {
