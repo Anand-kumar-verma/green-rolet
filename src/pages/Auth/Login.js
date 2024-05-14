@@ -138,7 +138,7 @@ function Login() {
             </Box>
           </Box>
         </Box>
-      </Box >
+      </Box>
       <Box sx={{
         position: 'absolute',
         width: '215px',
