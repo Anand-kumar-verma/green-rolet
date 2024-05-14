@@ -3,12 +3,16 @@ import './assets/css/main.css'
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Login from './pages/Auth/Login';
+import Rollet from './component/Rollet';
+import RolletIFrame from './component/RolletIFrame';
 
 function App() {
   return (
     <Routes>
       <Route path='/' Component={Login}></Route>
       <Route path='/dashboard' Component={Home}></Route>
+      <Route path='/rollet' Component={RolletIFrame}></Route>
+      <Route path='/new' Component={Rollet}></Route>
     </Routes>
   );
 }
