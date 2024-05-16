@@ -1,13 +1,17 @@
 import CloseIcon from '@mui/icons-material/Close'
-import { Box, Drawer, IconButton, Stack, Typography } from '@mui/material'
+import { Box, Button, Drawer, IconButton, Stack, Typography } from '@mui/material'
 import { NavLink } from 'react-router-dom'
 import rouletteBORD from '../../assets/images/rolettetable.png'
 import rollatesidebar from '../../assets/images/roulettesidebar.png'
 import RolletIFrame from "../../component/RolletIFrame"
 import { useState } from 'react'
 import roulette from '../../assets/images/rolette.jpeg'
+import chip from '../../assets/images/chip.png'
+
+
 function Home() {
   const [open, setOpen] = useState(false);
+  const [betpopup, setbetpopup] = useState(false);
   return (
     <Box className="home" sx={style.root}>
       <Box
@@ -337,6 +341,35 @@ function Home() {
           </Box>
         </Stack>
       </Box>
+      <Box sx={{
+        transform: 'rotate(90deg)',
+        position: 'absolute',
+        top: '28%',
+        width: '75%',
+        left: '-11%', height: '30px', display: 'flex', alignItems: 'center', justifyContent: 'space-evenly'
+      }}>
+        <NavLink onClick={() => { setbetpopup(!betpopup) }}>
+          <Box component='img' src={chip} sx={{ width: '30px', height: '30px' }}></Box>
+        </NavLink>
+        <NavLink onClick={() => { setbetpopup(!betpopup) }}>
+          <Box component='img' src={chip} sx={{ width: '30px', height: '30px' }}></Box>
+        </NavLink>
+        <NavLink onClick={() => { setbetpopup(!betpopup) }}>
+          <Box component='img' src={chip} sx={{ width: '30px', height: '30px' }}></Box>
+        </NavLink>
+        <NavLink onClick={() => { setbetpopup(!betpopup) }}>
+          <Box component='img' src={chip} sx={{ width: '30px', height: '30px' }}></Box>
+        </NavLink>
+        <NavLink onClick={() => { setbetpopup(!betpopup) }}>
+          <Box component='img' src={chip} sx={{ width: '30px', height: '30px' }}></Box>
+        </NavLink>
+        <NavLink onClick={() => { setbetpopup(!betpopup) }}>
+          <Box component='img' src={chip} sx={{ width: '30px', height: '30px' }}></Box>
+        </NavLink>
+        <NavLink onClick={() => { setbetpopup(!betpopup) }}>
+          <Box component='img' src={chip} sx={{ width: '30px', height: '30px' }}></Box>
+        </NavLink>
+      </Box>
       <Box
         sx={{
           width: "200px",
@@ -348,14 +381,11 @@ function Home() {
         }}
       >
         <Box component='img' src={roulette} className='rotating-element'></Box>
-        <div className="h-[200px] w-[200px]">
-          <RolletIFrame />
-        </div>
       </Box>
       <Box sx={{
         width: '25px', height: '100%',
       }}>
-        <Box sx={style.naiming6} component={NavLink} onClick={() => { setOpen(!open) }}>
+        <Box sx={style.naiming2} component={NavLink} onClick={() => { setOpen(!open) }}>
           <Typography variant="body1" color="initial"></Typography>
           <Typography variant="body1" color="initial">
             NEIGHTBOUR BET
@@ -367,14 +397,6 @@ function Home() {
           </Typography>
           <Typography variant="body1" color="initial">
             0.08
-          </Typography>
-        </Box>
-        <Box sx={style.naiming2}>
-          <Typography variant="body1" color="initial">
-            Name
-          </Typography>
-          <Typography variant="body1" color="initial">
-            Raadhe
           </Typography>
         </Box>
         <Box sx={style.naiming3}>
@@ -461,6 +483,32 @@ function Home() {
           </Box>
         </Box>
       </Drawer >
+
+
+
+
+
+
+
+
+      {/*popup code  */}
+
+      <Drawer sx={{ '&>div': { background: 'white', width: '400px', height: '85vh', } }} anchor='top' open={betpopup} onClose={() => { setbetpopup(!betpopup) }}>
+        abcd
+      </Drawer >
+      {/* popup code end */}
+
+
+
+
+
+
+
+
+
+
+
+
     </Box >
   )
 }
@@ -469,10 +517,11 @@ export default Home;
 
 const style = {
   root: {
-    maxWidth: '400px', width: '100%', backgroundColor: '#000000', height: '85vh', overflow: 'hidden', marginTop: 'auto', position: 'relative',
+    maxWidth: '400px', marginTop: '4vh !important', width: '100%', backgroundColor: '#000000', height: '85vh', overflow: 'hidden', position: 'relative',
     backgroundImage: `url(${rouletteBORD})`, backgroundSize: '100% 100%',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'right',
+    margin: 'auto',
     // transform: 'rotate(-90deg) !important',
     // left: '22% !important',
   },
@@ -503,7 +552,7 @@ const style = {
     width: "40%",
     height: "63%",
     position: "absolute",
-    left: "30%",
+    left: "33%",
     top: "2%",
   },
   btn1: {
@@ -570,7 +619,7 @@ const style = {
     transform: "rotate(90deg)",
     position: "absolute",
     top: "7%",
-    left: "-7%",
+    left: "-6%",
     borderRadius: "5px",
     "&>p:nth-child(1)": {
       color: "black",
@@ -584,9 +633,7 @@ const style = {
       fontWeight: "600",
       padding: "5px 5px",
       background: "#15158f",
-      width: "80%",
-      margin: "auto",
-      marginBottom: "5px",
+
       borderRadius: "2px",
     },
   },
@@ -597,8 +644,9 @@ const style = {
     transform: "rotate(90deg)",
     position: "absolute",
     top: "28%",
-    left: "-7%",
+    left: "-6%",
     borderRadius: "5px",
+    textAlign: 'center',
     "&>p:nth-child(1)": {
       color: "black",
       fontSize: "13px",
@@ -611,25 +659,23 @@ const style = {
       fontWeight: "600",
       padding: "5px 5px",
       background: "#15158f",
-      width: "80%",
-      margin: "auto",
-      marginBottom: "5px",
       borderRadius: "2px",
     },
   },
   naiming3: {
     background:
       "linear-gradient(to right,#BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C)",
-    width: "120px",
+    // width: "100px",
     transform: "rotate(90deg)",
     position: "absolute",
-    top: "60%",
-    left: "-11%",
+    top: "46%",
+    left: "-1.7%",
     borderRadius: "5px",
-    padding: "15px",
+    padding: "15px 5px",
+    textAlign: 'center',
     "&>p:nth-child(1)": {
       color: "black",
-      fontSize: "13px",
+      fontSize: "10px",
       fontWeight: "600",
       textAlign: "center",
     },
@@ -639,9 +685,6 @@ const style = {
       fontWeight: "600",
       padding: "5px 5px",
       background: "#15158f",
-      width: "80%",
-      margin: "auto",
-      marginBottom: "5px",
       borderRadius: "2px",
     },
   },
@@ -652,6 +695,7 @@ const style = {
     position: "absolute",
     bottom: "8%",
     left: "-9%",
+    textAlign: 'center',
     borderRadius: "5px",
     "&>p:nth-child(1)": {
       color: "black",
@@ -665,15 +709,12 @@ const style = {
       fontWeight: "600",
       padding: "5px 5px",
       background: "red",
-      width: "80%",
-      margin: "auto",
-      marginBottom: "5px",
       borderRadius: "2px",
     },
   },
   naiming5: {
     background: 'red', width: '120px',
-    transform: 'rotate(90deg)', position: 'absolute', bottom: '34%', left: '5%', borderRadius: '5px',
+    transform: 'rotate(90deg)', position: 'absolute', bottom: '28%', left: '-5.3%', borderRadius: '5px',
     '&>p:nth-child(1)': { color: 'black', fontSize: '13px', fontWeight: '600', textAlign: 'center', },
     '&>p:nth-child(2)': { color: 'white', fontSize: '13px', fontWeight: '600', padding: '5px 5px', background: 'red', width: '80%', margin: 'auto', marginBottom: '5px', borderRadius: '2px', },
   },
@@ -699,9 +740,6 @@ const style = {
       fontWeight: "600",
       padding: "5px 5px",
       background: "#15158f",
-      width: "80%",
-      margin: "auto",
-      marginBottom: "5px",
       borderRadius: "2px",
     },
   },

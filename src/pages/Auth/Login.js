@@ -17,7 +17,7 @@ function Login() {
 
   return (
     <Box className="home" sx={style.root}>
-      <Box sx={{ position: 'absolute', width: '280px', height: '300px', border: '2px solid #0C339F', background: '#050528d6', borderRadius: '10px', top: '5%', right: '3%' }}>
+      <Box sx={{ position: 'absolute', width: '300px', height: '300px', border: '2px solid #0C339F', background: '#050528d6', borderRadius: '10px', top: '5%', right: '3%' }}>
         <Box sx={{ width: '100%', height: '100%', position: 'relative' }}>
           <Typography variant="body1" sx={{
             position: 'absolute',
@@ -36,7 +36,7 @@ function Login() {
             transform: 'rotate(90deg)',
             position: 'absolute',
             top: '6%',
-            right: '5%',
+            right: '7%',
           }}>
             <Typography variant="body1" sx={{
               background: 'linear-gradient(to right,#BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C)',
@@ -141,8 +141,8 @@ function Login() {
       </Box >
       <Box sx={{
         position: 'absolute',
-        width: '215px',
-        height: '123px',
+        width: '260px',
+        height: '145px',
         border: '2px solid #0C339F',
         backgroundColor: '#050528d6',
         borderRadius: '10px',
@@ -150,7 +150,7 @@ function Login() {
         right: '3%',
         padding: '10px',
         transform: 'rotate(90deg)',
-        bottom: '11%',
+        bottom: '12.5%',
         left: '24%',
       }}>
         <Stack direction='row' alignItems='center'>
@@ -182,7 +182,7 @@ export default Login
 
 const style = {
   root: {
-    maxWidth: '400px', width: '100%', backgroundColor: '#000000', height: '85vh', overflow: 'hidden', marginTop: 'auto', position: 'relative',
+    maxWidth: '400px', width: '100%', backgroundColor: '#000000', height: '85vh', overflow: 'hidden', marginTop: 'auto', position: 'relative', margin: 'auto',
     backgroundImage: `url(${rouletteBORD})`, backgroundSize: '100% 100%',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'right',
