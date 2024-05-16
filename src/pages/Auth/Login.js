@@ -4,16 +4,60 @@ import React, { useEffect, useState } from 'react'
 import pngwing from '../../assets/images/pngwing.com.png'
 import rouletteBORD from '../../assets/images/output-onlinepngtools.png'
 import { NavLink } from 'react-router-dom'
+import axios from 'axios'
+import { storeCookies } from '../../services/apiCallings'
+import { endPoint } from '../../services'
 
 function Login() {
 
   const [showPassword, setShowPassword] = React.useState(false);
-
+  const user_id = localStorage.getItem("user_id");
+  const navigate = useNavigate();
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
+
+  const initialValue = {
+    email: "",
+    password: "",
+    mobile: "",
+  };
+
+  const fk = useFormik({
+    initialValues: initialValue,
+    onSubmit: () => {
+      const reqBody = {
+        email: value === "one" ? String(fk.values.mobile) : fk.values.email,
+        password: fk.values.password,
+      };
+      if (!reqBody.password || !reqBody.email)
+        return toast("Plese enter all fields");
+      loginSubmit(reqBody);
+    },
+  });
+
+  async function loginSubmit(reqBody) {
+    try {
+      const res = await axios.post(endPoint.login, reqBody);
+      console.log(res);
+      if (res?.data?.success === "200") {
+        storeCookies();
+        toast(res?.data?.message);
+        localStorage.setItem("user_id", res?.data?.data?.or_user_id);
+        navigate("/dashboard");
+      } else {
+        toast(res?.data?.msg);
+      }
+    } catch (e) {
+      toast(e?.response?.data?.message);
+    }
+  }
+
+  useEffect(() => {
+    user_id && navigate("/dashboard");
+  }, [user_id]);
 
   return (
     <Box className="home" sx={style.root}>
